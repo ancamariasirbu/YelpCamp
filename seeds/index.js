@@ -22,7 +22,14 @@ const seedDB = async () => {
         const price = Math.floor(Math.random() * 20) + 10; // Random price between 10 and 30
         const camp = new Campground({
             author: '68c298503b148c4b459c9495',
-            location: `${cities[random1000].city}, ${cities[random1000].state}`,
+            location: `${cities[random1000].city}, ${cities[random1000].state}`, 
+            geometry: {
+                type: "Point",
+                coordinates: [
+                    cities[random1000].longitude,
+                    cities[random1000].latitude,
+                ]
+            },
             title: `${sample(descriptors)} ${sample(places)}`,
             // image: `https://picsum.photos/400?random=${Math.random()}`,
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
