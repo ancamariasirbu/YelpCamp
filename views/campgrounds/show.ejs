@@ -11,7 +11,13 @@
         </div>
         <% }) %>
       </div>
-      <%if(campground.images.length > 1) { %>
+      <% if(!campground.images.length) { %>
+      <img
+        src="https://res.cloudinary.com/dot4wjxmc/image/upload/v1759742954/no-image-available-icon-vector_hvgitx.jpg"
+        class="img-fluid"
+        alt=""
+      />
+      <% } %> <%if(campground.images.length > 1) { %>
       <button
         class="carousel-control-prev"
         type="button"
@@ -64,6 +70,7 @@
     </div>
 
     <div class="col-6">
+      <div id="map" style="width: 100%; height: 300px"></div>
       <a class="btn btn-outline-dark" href="/campgrounds ">All Campgrounds</a>
     </div>
   </div>
@@ -173,3 +180,10 @@
     <% } %>
   </div>
 </div>
+
+<script>
+  const maptilerApiKey = '<%- process.env.MAPTILER_API_KEY %>';
+  const campground = <%- JSON.stringify(campground) %>;
+</script>
+
+<script src="/javascripts/showPageMap.js"></script>
