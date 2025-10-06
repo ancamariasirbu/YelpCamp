@@ -44,12 +44,15 @@
         <p class="card-text"><%= campground.description %></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item text-muted"><%= campground.location %></li>
-        <li class="list-group-item">
+        <li
+          class="list-group-item d-flex align-items-center justify-content-between"
+        >
+          <span class="text-muted"><%= campground.location %></span>
+
           <!-- Button trigger modal -->
           <button
             type="button"
-            class="btn btn-primary btn-sm"
+            class="btn btn-dark btn-sm"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
