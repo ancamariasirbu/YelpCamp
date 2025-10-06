@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const cities = require('./cities');
+const images = require('./images');
 const { places, descriptors } = require('./seedHelpers');
 const Campground = require('../models/campground');
 
@@ -34,17 +35,10 @@ const seedDB = async () => {
             // image: `https://picsum.photos/400?random=${Math.random()}`,
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             price: price,
-            images: [
-                {
-                    url: 'https://res.cloudinary.com/dot4wjxmc/image/upload/v1759165158/YelpCamp/vhhzcryjzxnjjbquzfca.jpg',             
-                    filename: 'YelpCamp/vhhzcryjzxnjjbquzfca'
-                },
-                {
-                    url: 'https://res.cloudinary.com/dot4wjxmc/image/upload/v1759165157/YelpCamp/guorogcn9blegaqvgace.png',             
-                    filename: 'YelpCamp/guorogcn9blegaqvgace'
-                }
+            images: [ 
+                images[random1000 % images.length],
+                images[(random1000 + 1) % images.length]
             ]
-
         })
         await camp.save();
     }
