@@ -1,5 +1,18 @@
-.card {
-  max-height: 250px;   
-  overflow: hidden;    
+.card-img-size {
+  height: 250px;             /* fixed height for uniform cards */
+  width: 100%;
+  overflow: hidden;          /* hides overflow */
+  display: flex;             /* ensures centering */
+  justify-content: center;
+  align-items: center;
 }
+
+.card-img-size img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;         /* crop and fill */
+  object-position: center;   /* center crop */
+}
+
+
 
