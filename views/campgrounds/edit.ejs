@@ -1,12 +1,33 @@
 <% layout('layouts/boilerplate') %>
-<div class="row">
+
+
+<!-- <div class="row">
   <div class="col-12">
     <h1 class="text-center">Edit Campground</h1>
   </div>
 </div>
 <div class="row">
-  <div class="col-6 offset-3">
-    <form
+  <div class="col-md-6 offset-md-3">
+    
+    
+  </div>
+</div> -->
+
+
+
+
+<div class="container d-flex justify-content-center align-items-center mb-3">
+  <div class="row flex-fill">
+    <div class="col-md-6 offset-md-3 col-xl-6 offset-xl-3">
+      <div class="card shadow">
+        <img
+          src="https://res.cloudinary.com/dot4wjxmc/image/upload/v1759851885/edit-camp_kagl3m.png"
+          alt=""
+          class="card-img-top"
+        />
+        <div class="card-body">
+           
+          <form
       action="/campgrounds/<%=campground.id%>?_method=PUT"
       method="POST"
       novalidate
@@ -46,20 +67,6 @@
         />
         <label class="input-group-text" for="image">Upload</label>
       </div>
-      <!-- <div class="mb-3">
-        <% campground.images.forEach(function(img, i) { %>
-        <img src="<%= img.thumbnail %>" alt="" class="img-thumbnail" />
-      </div>
-      <div class="form-check-inline">
-        <input
-          type="checkbox"
-          name="deleteImages[]"
-          value="<%= img.filename %>"
-          id="image-<%=i%>"
-        />
-        <label for="image-<%=i%>">Delete</label>
-      </div>
-      <% }) %> -->
       <label class="form-label" for="image">Delete image(s)</label>
       <div class="row row-cols-1 row-cols-md-4 g-4 mb-3">
         <% campground.images.forEach((image, i) => { %>
@@ -111,9 +118,12 @@
         >
       </div>
       <div class="mb-3">
-        <button class="btn btn-info">Update Campground</button>
+        <button class="btn btn-dark col-12">Update Campground</button>
       </div>
     </form>
-    <a href="/campgrounds/<%= campground._id%>">Back to Campground</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<!-- <a href="/campgrounds/<%= campground._id%>">Back to Campground</a> -->
