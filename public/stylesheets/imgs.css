@@ -13,3 +13,7 @@
   object-fit: cover;         /* crop and fill */
   object-position: center;   /* center crop */
 }
+
+.card-img-top {
+padding: 2rem 1rem;
+}
