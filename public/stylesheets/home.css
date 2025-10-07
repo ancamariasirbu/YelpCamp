@@ -36,3 +36,9 @@ body {
     color: #333;
     text-shadow: none;
 }
+
+.container {
+    max-width: 30vh;
+    object-fit: cover;
+    object-position: center;
+}
