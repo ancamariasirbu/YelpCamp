@@ -1,0 +1,5 @@
+.navbar-logo {
+  height: 30px;    /* adjust to your desired size */
+  width: auto;     /* keeps aspect ratio */
+  object-fit: contain; /* makes sure it doesn't stretch */
+}
