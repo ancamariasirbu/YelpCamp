@@ -1,0 +1,23 @@
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: rgba(0, 0, 0, 0.2); /* semi-transparent background */
+  border-radius: 50%;
+  background-size: 70%;
+
+}
+
+.carousel-control-prev-icon {
+  background-position: 35%;
+}
+
+.carousel-control-next-icon {
+  background-position: 65%;
+}
+
+
+/* .card {
+    max-width: 80%;
+}
+
+.carousel-item img {
+    max-width: 80%;
+} */
