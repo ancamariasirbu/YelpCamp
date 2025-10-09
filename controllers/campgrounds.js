@@ -7,7 +7,7 @@ maptilerClient.config.apiKey = process.env.MAPTILER_API_KEY;
 
 
 module.exports.index = async (req, res) => {
-    const campgrounds = await Campground.find({})
+const campgrounds = await Campground.find({}).sort({ _id: -1 });
     res.render('campgrounds/index', { campgrounds })
 };
 
